@@ -118,7 +118,7 @@ class ImportDevice {
                             fs.copyFileSync(imagePath, tempPath);
                             fs.renameSync(tempPath, finalPath);
 
-                            device.images = [finalPath.replace("src\\public", "")];
+                            device.images = [finalPath.replace("src/public", "")];
                             await device.save();
                         }
 
