@@ -194,7 +194,7 @@ class ImportOrder {
 
     // 2. Trích xuất danh sách quà tặng từ bảng
     // Mỗi dòng có thể có định dạng: 1 Bình giữ nhiệt Đối tác 20
-    const giftRegex = /^\d+\s+(.+?)\s{2,}(.+?)\s+(\d+)\s*$/gm;
+    const giftRegex = /^\d+\t(.+?)\t.+?\t(\d+)\t?/gm;
     let match;
     while ((match = giftRegex.exec(pdfText)) !== null) {
       const giftName = match[1].trim();
